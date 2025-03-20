@@ -1,0 +1,108 @@
+/* body{
+    background-color: aquamarine;
+} */
+html, body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 100%;
+    background-color: rgb(235, 171, 54);
+    .section{
+        padding: 10px;
+        a{
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: x-large;
+            transition: color .3s ease;
+        }
+        a:hover{
+            color: rgb(239, 215, 40);
+        }
+    }
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .card{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        .text-block{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            h1{
+                margin: 0;
+            }
+            gap: 10px;
+            .btn-wrapper{
+                button{
+                    width: 150px;
+                    border: none;
+                    padding: 10px;
+                    background-color: orange;
+                    color: white;
+                    font-size: medium;
+                    border-radius: 10px;
+                    transition: background-color .5s ease;
+                    cursor: pointer;
+                }
+                button:hover{
+                    background-color: orangered;
+                }
+            }
+        }
+    }
+    .card img{
+        max-width: 50%;
+    }
+}
+
+.no-products {
+    position: absolute;    /* Абсолютное позиционирование */
+    top: 50%;              /* Сдвигаем на 50% сверху */
+    left: 50%;             /* Сдвигаем на 50% слева */
+    transform: translate(-50%, -50%);  /* Центрируем по оси X и Y */
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;             /* Убираем отступы */
+    padding: 20px;
+    font-size: 24px;
+    color: red;
+    background-color: #f0f0f0;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 556px) {
+    .card{
+        flex-direction: column;
+    }
+    .card img{
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .card{
+        .text-block{
+            font-size: smaller;
+        }
+    }
+    .card{
+        flex-direction: column;
+    }
+    header .section a{
+        font-size: large;
+    }
+}

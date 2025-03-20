@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'sushi_shop/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'sushi_shop/css/about.css' %}">
+    <title>{% block title %}Sushi Shop{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <div class="section admin-block">
+            <a href="/admin">Админка</a>
+        </div>
+        <div class="section about">
+            <a href="/">О сайте</a>
+        </div>
+        <div class="section sushi">
+            <a href="/sushi">Суши</a>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Здесь будет основной контент страницы -->
+        {% endblock %}
+    </main>
+</body>
+</html>

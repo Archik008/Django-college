@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Суши{% endblock %}
+{% block content %}
+    {% if products %}
+        {% for product in products %}        
+            <div class="card">
+                {% if product.photo %}
+                    <img src="{{ product.photo.url }}" alt="">
+                {% else %}
+                    <img src="{% static 'sushi_shop/img/no_image.jpg' %}" alt="">
+                {% endif %}
+                <div class="text-block">
+                    <div class="title">
+                        <h1>{{ product.title }}</h1>
+                    </div>
+                    <div class="description">
+                        {{ product.description }}
+                    </div>
+                    <div class="btn-wrapper">
+                        <button type="button" class="buy-btn">Купить</button>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="no-products">
+            <h1>Пока нету продуктов</h1>
+        </div>
+    {% endif %}
+{% endblock %}

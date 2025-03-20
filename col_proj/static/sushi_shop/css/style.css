@@ -27,10 +27,11 @@ header{
 main{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     .card{
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         gap: 10px;
         padding: 10px;
         .text-block{
@@ -59,9 +60,9 @@ main{
             }
         }
     }
-    .card img{
+    /* .card img{
         max-width: 50%;
-    }
+    } */
 }
 
 .no-products {

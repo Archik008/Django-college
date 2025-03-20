@@ -5,4 +5,4 @@ from django.db import models
 class ProductsModel(models.Model):
     title = models.CharField("Название", max_length=50)
     description = models.TextField("Описание", max_length=500)
-    photo = models.ImageField("Фото", upload_to="media/%Y/%m/%d", null=True)
+    photo = models.ImageField("Фото", upload_to="media/%Y/%m/%d", null=True, blank=True)
